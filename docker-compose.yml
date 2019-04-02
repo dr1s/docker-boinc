@@ -1,0 +1,14 @@
+boinc:
+  build: .
+  container_name: boinc
+  environment:
+  - CLIENT_VERSION=7.14.2
+  - PROJECT_URL=http://setiathome.berkeley.edu/
+  - TOKEN=$API_TOKEN
+  - RPC_PASSWORD=change_me123
+  volumes:
+  - ./data:/boinc
+  ports:
+  - "31416:31416"
+  expose:
+  - "31416"
